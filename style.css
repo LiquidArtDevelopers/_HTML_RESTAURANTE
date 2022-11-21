@@ -6,6 +6,11 @@
   outline: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "robothin";
+  src: url("./fonts/Roboto-Thin.ttf");
+}
+  
 body{
     background-color: #e4e4e4;
     width: 100%;
@@ -71,7 +76,7 @@ header{
   align-items: center;
 
   font-size: 60px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'robothin';
   color: #2d4573;
 }
 
