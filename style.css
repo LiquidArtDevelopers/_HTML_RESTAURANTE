@@ -10,16 +10,19 @@
   font-family: "robothin";
   src: url("./fonts/Roboto-Thin.ttf");
 }
-  
+
+
+/* estilos movil first */
+
 body{
-    background-color: #e4e4e4;
-    width: 100%;
+  background-color: #e4e4e4;
+  width: 100%;
 }
+
 .contenedor-principal{
-    background-color: white;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 /* nav */
@@ -27,31 +30,35 @@ body{
 nav{
   background-color: #2d4573;
   width: 100%;
-  height: 70px;
+  height: 100px; /* responsive */
   position: fixed;
   max-width: 1500px;
   z-index: 10;
-  padding-left: 20px;
+  padding-left: 0px; /* responsive */
 
-  display: flex;
+  display: block; /* responsive */
   flex-direction: row;
   align-items: center;
 }
 .nav-home{
   background-color: black;
-  width: 70px;
-  height: 100%;
+  width: 100%; /* responsive */
+  height: 50%; /* responsive */
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .nav-resto{
+  width: 100%; /* responsive */
+  height: 50%; /* responsive */
+
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 30px;
-  padding-left: 15px;
+  column-gap: 25px; /* responsive */
+  padding-left: 15px; /* responsive */
+  padding-right: 15px; /* responsive */
 }
 nav a{
   color: white;
@@ -64,7 +71,7 @@ a:visited{
 /* cabecera */
 
 header{
-  padding-top: 70px;
+  padding-top: 100px;
   position: relative;
 }
 .logo{
@@ -76,7 +83,7 @@ header{
   align-items: center;
 
   font-size: 60px;
-  font-family:'robothin';
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #2d4573;
 }
 
@@ -97,7 +104,7 @@ header{
   margin-bottom: 10px;
   
   color: white;
-  font-size: 30px;
+  font-size: 25px; /* responsive */
   font-family:'Lucia Sans';
   font-style: italic;
   }
@@ -105,6 +112,7 @@ header{
 /* estilos comunes */
 section{
   max-width: 1100px;
+  width: 95%; /* responsive */
   margin: 20px auto;
 }
 article{
@@ -118,13 +126,13 @@ article{
 .contenedor-art{
   
   width: 100%;
-  height: 400px;
+  height: 100%; /* responsive */
 
-  display: flex;
+  display: block; /* responsive */
   flex-direction: row;
 }
 .art-text{
-  width: 48%;
+  width: 100%; /* responsive */
   border-top: 1px solid #2d4573;
   padding: 20px 0px;
 
@@ -155,37 +163,36 @@ a span{
 }
 
 
-
-
-
 /* estilos para div de imágenes */
 
 /* div de las imágenes donde delimitamos que la imagen no redimensione el div */
 /* también es el div contenedor de div de imágenes de los artículos 2 y 3 */
 .art-img{
-  width: 48%;  
-  
+  width: 100%;  /* responsive */
+  max-height: 350px; /* responsive */
   overflow:hidden;
   background-repeat: no-repeat;
   background-size:contain;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;    
+  margin-bottom: 20px;
 }
 /* divs exclusivos de imágenes art 02 y03 */
 .art-img01{  
-  width: 45%;
+  width: 48%;
   height: 100%;
   overflow: hidden; /* asi la imagen no redimensiona el div */
 }
 .art-img02{  
-  width: 45%;
+  width: 48%;
   height: 100%;  
   overflow: hidden;
 }
 
 /*ajuste de imagen. Posicionamiento de la imagen dentro de su div */
 #art03 .art-img01 img{
+  
   position: relative;
   top: -20px;
   left: -30px;
@@ -208,7 +215,7 @@ a span{
 
 
 .art-text-pie{
-  width: 38%;
+  width: 100%;
   border-top: 1px solid #2d4573;
   padding: 20px 0px;
 
@@ -224,16 +231,16 @@ a span{
   font-size: 16px;
 }
 
-
 .art-img-pie{
-  width: 58%;  
-  
+  width: 100%;  
+  height: 350px; /* responsive */
   overflow:hidden;
   background-repeat: no-repeat;
   background-size:contain;
 
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .art-img01-pie{  
   width: 48%;
@@ -242,7 +249,7 @@ a span{
 }
 .art-img02-pie{  
   width: 48%;
-  height: 100%;  
+  height: 100%;
   overflow: hidden;
 }
 
@@ -256,72 +263,72 @@ a span{
 }
 
 
-@media (max-width:1500px){
+/* fin de estilos movil first */
+
+/* estilos para tablet */
+@media (min-width:540px){
   section{
     width: 95%; /* responsive */
     margin: 20px auto;
   }
 }
 
+/* estilos para pantalla pc */
+@media (min-width:900px){
 
-@media (max-width:768px){
-
-  .contenedor-principal{
+    .contenedor-principal{
+    background-color: white;
     max-width: 1500px;
     margin: 0 auto;
     padding-bottom: 20px;
-  }
+    }
 
-  /* nav */
+    /* nav */
 
-  nav{
+    nav{
     background-color: #2d4573;
     width: 100%;
-    height: 100px; /* responsive */
+    height: 70px;
     position: fixed;
     max-width: 1500px;
     z-index: 10;
-    padding-left: 0px; /* responsive */
+    padding-left: 20px;
 
-    display: block; /* responsive */
+    display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  .nav-home{
+    }
+    .nav-home{
     background-color: black;
-    width: 100%; /* responsive */
-    height: 50%; /* responsive */
+    width: 70px;
+    height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .nav-resto{
-    width: 100%; /* responsive */
-    height: 50%; /* responsive */
-
+    }
+    .nav-resto{
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 25px; /* responsive */
-    padding-left: 15px; /* responsive */
-    padding-right: 15px; /* responsive */
-  }
-  nav a{
+    column-gap: 30px;
+    padding-left: 15px;
+    }
+    nav a{
     color: white;
     text-decoration: none;  
-  }
-  a:visited{
+    }
+    a:visited{
     color:white;
-  }
+    }
 
-  /* cabecera */
+    /* cabecera */
 
-  header{
-    padding-top: 100px;
+    header{
+    padding-top: 70px;
     position: relative;
-  }
-  .logo{
+    }
+    .logo{
     width: 100%;
     height: 90px;
 
@@ -330,187 +337,184 @@ a span{
     align-items: center;
 
     font-size: 60px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'robothin';
     color: #2d4573;
-  }
+    }
 
-  .portada-imagen{
+    .portada-imagen{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .portada-imagen img{
+    }
+    .portada-imagen img{
     width: 100%;
-  }
-  .portada-text{
+    }
+    .portada-text{
     position: absolute; /* se coloca encima ya que es hijo, y su padre está delimitado por la imagen */
-  }
-  .portada-text h3{
+    }
+    .portada-text h3{
     text-align: center;
     margin-bottom: 10px;
-    
+
     color: white;
-    font-size: 25px; /* responsive */
+    font-size: 30px;
     font-family:'Lucia Sans';
     font-style: italic;
     }
 
-  /* estilos comunes */
-  section{
+    /* estilos comunes */
+    section{
     max-width: 1100px;
-    width: 95%; /* responsive */
     margin: 20px auto;
-  }
-  article{
+    }
+    article{
     margin-bottom: 80px;
     display: flex;
     justify-content: space-between;
 
-  }
+    }
 
-  /* estilos para div de textos */
-  .contenedor-art{
-    
+    /* estilos para div de textos */
+    .contenedor-art{
+
     width: 100%;
-    height: 100%; /* responsive */
+    height: 400px;
 
-    display: block; /* responsive */
+    display: flex;
     flex-direction: row;
-  }
-  .art-text{
-    width: 100%; /* responsive */
+    }
+    .art-text{
+    width: 48%;
     border-top: 1px solid #2d4573;
     padding: 20px 0px;
 
     font-family: 'Arial';
     text-align: justify;
-  }
-  .art-text h1{
+    }
+    .art-text h1{
     text-align: center;
     margin-bottom: 30px;
     font-size: 30px;
-  }
-  .art-text p{  
+    }
+    .art-text p{  
     font-size: 16px;
-  }
-  .span{
+    }
+    .span{
     display: flex;
     justify-content: center;
-  }
-  span{
+    }
+    span{
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 15px;
     padding-right: 15px;
     border: 1px solid #2d4573;
-  }
-  a span{
+    }
+    a span{
     color: black;
-  }
+    }
 
 
 
 
 
-  /* estilos para div de imágenes */
+    /* estilos para div de imágenes */
 
-  /* div de las imágenes donde delimitamos que la imagen no redimensione el div */
-  /* también es el div contenedor de div de imágenes de los artículos 2 y 3 */
-  .art-img{
-    width: 100%;  /* responsive */
-    max-height: 350px; /* responsive */
-    overflow:hidden;
-    background-repeat: no-repeat;
-    background-size:contain;
+    /* div de las imágenes donde delimitamos que la imagen no redimensione el div */
+    /* también es el div contenedor de div de imágenes de los artículos 2 y 3 */
+    .art-img{
+    width: 48%;  
 
-    display: flex;
-    justify-content: space-between;    
-    margin-bottom: 20px;
-  }
-  /* divs exclusivos de imágenes art 02 y03 */
-  .art-img01{  
-    width: 48%;
-    height: 100%;
-    overflow: hidden; /* asi la imagen no redimensiona el div */
-  }
-  .art-img02{  
-    width: 48%;
-    height: 100%;  
-    overflow: hidden;
-  }
-
-  /*ajuste de imagen. Posicionamiento de la imagen dentro de su div */
-  #art03 .art-img01 img{
-    
-    position: relative;
-    top: -20px;
-    left: -30px;
-  }
-  #art03 .art-img02 img{
-      height: 100%;
-      position: relative;
-      left: -300px;
-  }
-
-  /* estilo excepción cuando la imagen va a la derecha */
-  #art01 .art-img{
-    order:1; /* cambiamos el orden ya que en este artículo va la imagen a la derecha */
-  }
-  #art03 .art-img{
-    order:1; /* cambiamos el orden ya que en este artículo va la imagen a la derecha */
-  }
-
-
-
-
-  .art-text-pie{
-    width: 100%;
-    border-top: 1px solid #2d4573;
-    padding: 20px 0px;
-  
-    font-family: 'Arial';
-    text-align: justify;
-  }
-  .art-text-pie h1{
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
-  }
-  .art-text-pie p{  
-    font-size: 16px;
-  }
-
-  .art-img-pie{
-    width: 100%;  
-    height: 350px; /* responsive */
     overflow:hidden;
     background-repeat: no-repeat;
     background-size:contain;
 
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  .art-img01-pie{  
+    }
+    /* divs exclusivos de imágenes art 02 y03 */
+    .art-img01{  
+    width: 45%;
+    height: 100%;
+    overflow: hidden; /* asi la imagen no redimensiona el div */
+    }
+    .art-img02{  
+    width: 45%;
+    height: 100%;  
+    overflow: hidden;
+    }
+
+    /*ajuste de imagen. Posicionamiento de la imagen dentro de su div */
+    #art03 .art-img01 img{
+    position: relative;
+    top: -20px;
+    left: -30px;
+    }
+    #art03 .art-img02 img{
+        height: 100%;
+        position: relative;
+        left: -300px;
+    }
+
+    /* estilo excepción cuando la imagen va a la derecha */
+    #art01 .art-img{
+    order:1; /* cambiamos el orden ya que en este artículo va la imagen a la derecha */
+    }
+    #art03 .art-img{
+    order:1; /* cambiamos el orden ya que en este artículo va la imagen a la derecha */
+    }
+
+
+
+
+    .art-text-pie{
+    width: 38%;
+    border-top: 1px solid #2d4573;
+    padding: 20px 0px;
+
+    font-family: 'Arial';
+    text-align: justify;
+    }
+    .art-text-pie h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    }
+    .art-text-pie p{  
+    font-size: 16px;
+    }
+
+
+    .art-img-pie{
+    width: 58%;  
+
+    overflow:hidden;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+    display: flex;
+    justify-content: space-between;
+    }
+    .art-img01-pie{  
     width: 48%;
     height: 100%;
     overflow: hidden; /* asi la imagen no redimensiona el div */
-  }
-  .art-img02-pie{  
+    }
+    .art-img02-pie{  
     width: 48%;
-    height: 100%;
+    height: 100%;  
     overflow: hidden;
-  }
+    }
 
-  .art-img01-pie img{
+    .art-img01-pie img{
     height: 100%;
-  }
-  .art-img02-pie img{
+    }
+    .art-img02-pie img{
     height: 100%;
     position: relative;
     left: -100px;
-  }
+    }
 
 }
 
